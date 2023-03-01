@@ -115,6 +115,25 @@ body{
     margin-left: 30px;
 }
 
+@media (max-width: 767px) { 
+    .seccion-grilla{
+        display: flex;
+        margin: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+    }
+    .seccion-grilla__titulo{
+        border-right: none;
+        border-bottom: 1px solid var(--gris);
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;    
+    }
+}
+
+/* BLOQUE GRILLA 3 */
 .bloque-grilla3{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -149,6 +168,15 @@ body{
     width: 180px;
 }
 
+@media (max-width: 768px) { 
+    .bloque-grilla3{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+}
+
+/* DATO */
 .dato { 
     display: flex;
     background: url(Recursos/musica.jpg) no-repeat center center fixed;
@@ -168,7 +196,14 @@ body{
     color: white;
 }
 
+@media (max-width: 768px) { 
+    .dato{
+        background: url(Recursos/musica.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+}
 
+/* BLOQUE GRILLA 4 */
 .bloque-grilla4{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -211,7 +246,12 @@ body{
     background-color: #2C3231;
 }
 
-
+@media (max-width: 768px) { 
+    .bloque-grilla4{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* HABILIDADES */
 
@@ -235,4 +275,38 @@ body{
 
 .seccion-habilidades .progress .progress-bar{
     background-color: var(--celeste);
+}
+
+/* SERVICIOS */
+.seccion-servicios{
+    display: grid;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.sector-izquierdo{
+    display: flex;
+    flex-direction: column;
+}
+.servicio-izq{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    text-align: right;
+}
+.servicio-imagen{
+    display: flex;
+    background-color: var(--celeste);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio-imagen svg{
+    height: 30px;
+    width: 30px;
+
 }
