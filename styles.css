@@ -289,11 +289,14 @@ body{
 .sector-izquierdo{
     display: flex;
     flex-direction: column;
+    align-content: end;
+    gap: 1rem; 
 }
 .servicio-izq{
     display: grid;
     grid-template-columns: 4fr 1fr;
     text-align: right;
+    column-gap: 1rem;
 }
 .servicio-imagen{
     display: flex;
@@ -309,4 +312,183 @@ body{
     height: 30px;
     width: 30px;
 
+}
+
+.sector-derecho{
+    display: flex;
+    flex-direction: column;
+    align-content: end;
+    gap: 1rem; 
+}
+.servicio-der{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    text-align: left;
+    column-gap: 1rem;
+}
+
+@media (max-width: 768px) { 
+    .seccion-servicios{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* PROCESOS */
+.proceso-creacion { 
+    display: flex;
+    background: url(Recursos/workspace.webp) no-repeat center center fixed;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.proceso-creacion__opacador{
+    height: 400px;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+}
+
+.proceso-creacion__texto{
+    color: white;
+}
+.proceso-creacion__texto h5{
+    margin-top: 10px;
+}
+
+.linea-proceso{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    color: white;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.etapa{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    justify-items: center;
+    height: 120px;
+    width: 120px;
+}
+
+.etapa img{
+    margin-bottom: .3rem;
+    height: 100px;
+    width: 100px;
+}
+
+.etapa p{
+    height: 25px;
+    width: 25px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.etapa h5{
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .proceso-creacion{
+        display: flex;
+        height: 700px;
+    }
+    .proceso-creacion__opacador{
+        height: 700px;
+    }
+    .etapa{
+        height: 100px;
+        width: 100px;
+        margin-bottom: 30px;
+    }
+    .etapa img{
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* CONTACTO */
+.seccion-contacto{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--gris-oscuro);
+    padding: 10px;
+    border-radius: 15px;
+    /* height: 400px; */
+    justify-content: center;
+}
+
+.seccion-contacto h1{
+    text-align: center;
+}
+
+.seccion-contacto img{
+    height: 150px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.seccion-contacto form{
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-contacto form label{
+    margin-bottom: 5px;
+}
+
+.seccion-contacto form button{
+    width: 200px;
+    height: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    background-color: black;
+    border: 1px solid var(--gris-oscuro);
+    text-align: center;
+    font-weight: bold;
+    transition: background-color .5s ease;
+    color: white;
+}
+
+.seccion-contacto form button:hover{
+    background-color: var(--celeste);
+    color: black;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    height: 60px;
+    color: var(--gris-oscuro);
+    font-size: 15px;
+    justify-content: space-around;
+}
+
+footer p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+footer a{
+    margin-top: auto;
+    margin-bottom: auto;
 }
