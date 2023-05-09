@@ -8,6 +8,7 @@
 html{
 	font-size: 62,5%;
     scroll-behavior: smooth;
+    user-select: none;
 }
 body{
 	font-size: 16px;
@@ -491,8 +492,8 @@ body{
 }
 
 .proyecto img{
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .texto-proyecto{
@@ -552,9 +553,26 @@ footer a{
     margin-bottom: auto;
 }
 
-.footer-redes a{
+.footer-redes{
+    display: flex;
+    flex-direction: row;
     margin-right: 10px;
     text-decoration: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media (max-width: 768px) { 
+    footer{
+        height: fit-content;
+    }
+    .footer-redes{
+        display: flex;
+        flex-direction: row;
+    }
+    footer svg{
+        scale: .75;
+    }
 }
 
 /* SECCION EXITO MAIL */
