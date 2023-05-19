@@ -1,6 +1,6 @@
 :root{
     font-family: 'Poppins', sans-serif;
-    --celeste: #12CDD4;
+    --celeste: #00bfd8;
     --gris: #c9c9c9;
     --gris-oscuro: #918f8f;
 
@@ -263,6 +263,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .seccion-habilidades h2{
@@ -276,6 +277,47 @@ body{
 
 .seccion-habilidades .progress .progress-bar{
     background-color: var(--celeste);
+}
+
+.grupo-habilidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.habilidad{
+    display: flex;
+    flex-direction: column;
+    background-color: #00bfd8;
+    color: black;
+    padding: 1rem;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 120px;
+}
+
+
+@media (max-width: 768px) { 
+    .habilidad{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        margin-right: 30px;
+    }
+    .habilidad h6{
+        font-size: 10px;
+    }
+    .grupo-habilidades{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* SERVICIOS */
