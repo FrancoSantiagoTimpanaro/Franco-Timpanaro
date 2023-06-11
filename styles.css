@@ -22,8 +22,7 @@ body{
 /* PRESENTACION */
 .presentacion { 
     display: flex;
-    background: url(Recursos/notebook.jpg) no-repeat center center fixed;
-    background-size:  center center fixed;
+    background: url(Recursos/notebook.jpg) no-repeat center center;
     height: 100vh;
     justify-content: center;
     align-items: center;
