@@ -379,7 +379,7 @@ body{
 /* PROCESOS */
 .proceso-creacion { 
     display: flex;
-    background: url(Recursos/workspace.webp) no-repeat center center fixed;
+    background: url(Recursos/workspace.webp) no-repeat center center;
     background-size: cover;
     height: 400px;
     width: 100%;
