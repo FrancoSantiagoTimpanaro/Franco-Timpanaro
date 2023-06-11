@@ -180,7 +180,7 @@ body{
 /* DATO */
 .dato { 
     display: flex;
-    background: url(Recursos/musica.jpg) no-repeat center center fixed;
+    background: url(Recursos/musica.jpg) no-repeat center center;
     background-size: cover;
     height: 200px;
     width: 100%;
@@ -199,7 +199,7 @@ body{
 
 @media (max-width: 768px) { 
     .dato{
-        background: url(Recursos/musica.jpg) no-repeat center center fixed;
+        background: url(Recursos/musica.jpg) no-repeat center center;
         background-size: cover;
     }
 }
