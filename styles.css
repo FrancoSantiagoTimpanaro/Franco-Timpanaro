@@ -424,6 +424,7 @@ body{
     justify-items: center;
     height: 120px;
     width: 120px;
+    transition: .5s;
 }
 
 .etapa img{
@@ -441,6 +442,10 @@ body{
 
 .etapa h5{
     font-size: 20px;
+}
+
+.etapa:hover{
+    scale: 1.1;
 }
 
 @media (max-width: 768px) {
@@ -485,6 +490,10 @@ body{
     width: 150px;
     margin-left: auto;
     margin-right: auto;
+    transition: 1s;
+}
+.seccion-contacto img:hover{
+    scale: 1.4;
 }
 .seccion-contacto form{
     display: flex;
@@ -531,6 +540,14 @@ body{
     margin-bottom: 100px;
     text-align: center;
     text-decoration: none;
+    transition: 1s;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.proyecto:hover{
+    scale: 1.05;
+    border: 1px solid var(--gris);
 }
 
 .proyecto img{
