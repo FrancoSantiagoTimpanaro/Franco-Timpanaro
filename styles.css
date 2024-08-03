@@ -547,7 +547,7 @@ body{
 
 .proyecto:hover{
     scale: 1.05;
-    border: 1px solid var(--gris);
+    /* border: 1px solid var(--gris); */
 }
 
 .proyecto img{
