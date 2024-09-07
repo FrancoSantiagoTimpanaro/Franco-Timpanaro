@@ -636,7 +636,7 @@ footer a{
 
 /* SECCION EXITO MAIL */
 .post-mail{
-    height: 94vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     color: white;

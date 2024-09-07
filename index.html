@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,400;1,800&family=Shantell+Sans:wght@400;800&display=swap" rel="stylesheet">
     <link rel="preload" href="Recursos/musica.jpg">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("fV2QJJbwEeyYumoAP");  // Reemplaza TU_USER_ID con tu user ID de EmailJS
+        })();
+    </script>
     <link rel="stylesheet" href="normalize.css">
     <title>Franco Timpanaro</title>
 </head>
@@ -449,18 +455,18 @@
   <div class="seccion-contacto" id="contacto">
     <img src="Recursos/franco-feliz.webp" alt="">
     <h1>CONTACTAME</h1>
-    <form action="https://formsubmit.co/954514f39e07acabf4b461c31aba1e1b" method="POST">
+    <form id="contact-form">
       <div class="form-floating mb-3">
-        <input type="text" name="name" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-        <label for="floatingInput">Nombre</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="name@example.com" required>
+        <label for="name">Nombre</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Tu Mail" required>
-        <label for="floatingInput">Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Tu Mail" required>
+        <label for="email">Email</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" name="message" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-        <label for="floatingInput">Motivo Contacto</label>
+        <input id="message" name="message" class="form-control" placeholder="name@example.com" required>
+        <label for="message">Motivo Contacto</label>
       </div>
       <input type="hidden" name="_subject" value="Nuevo Contacto de pagina!">
       <input type="hidden" name="_captcha" value="false">
@@ -494,6 +500,19 @@
             </a>
     </div> 
   </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+    <script type="text/javascript">
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+  
+          // Enviar el email utilizando EmailJS
+          emailjs.sendForm('service_cpt5dyr', 'template_ysj6iph', this)
+              .then(function() {
+                window.location.href = "mail-enviado.html"; 
+              }, function(error) {
+                  alert('Error al enviar el correo:', error);
+              });
+      });
+  </script>
 </body>
 </html>
